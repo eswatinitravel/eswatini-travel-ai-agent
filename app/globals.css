@@ -1,0 +1,16 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, sans-serif; background: #f6f7fb; color: #1b1f2a; }
+main { max-width: 720px; margin: 0 auto; padding: 32px 16px; }
+h1 { margin: 0 0 4px; }
+.sub { color: #5b6275; margin-top: 0; }
+.best { background: #e8f5ee; border: 1px solid #b7e1c8; padding: 10px 14px; border-radius: 10px; }
+.fares { list-style: none; padding: 0; }
+.fares li { display: flex; justify-content: space-between; align-items: center; background: #fff; border: 1px solid #e3e6ef; border-radius: 10px; padding: 12px 14px; margin-bottom: 10px; }
+.fares li.on { border-color: #0070ba; }
+.date { display: block; color: #5b6275; font-size: 13px; }
+.right { display: flex; gap: 12px; align-items: center; }
+.price { font-weight: 700; }
+button { background: #0070ba; color: #fff; border: 0; border-radius: 8px; padding: 8px 14px; cursor: pointer; }
+.pay { background: #fff; border: 1px solid #e3e6ef; border-radius: 12px; padding: 16px; margin-top: 20px; }
+.msg { color: #12703f; font-weight: 600; }
+.err { color: #b42318; }
