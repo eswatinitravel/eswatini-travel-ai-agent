@@ -1,0 +1,17 @@
+{
+  "name": "eswatini-travel-ai-agent",
+  "version": "0.1.0",
+  "private": true,
+  "description": "AI travel agent that finds the cheapest Johannesburg-Lahore fares and takes payment with PayPal (sandbox).",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@paypal/react-paypal-js": "^8.7.0",
+    "next": "14.2.15",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  }
+}
