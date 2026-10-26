@@ -3,7 +3,8 @@ import { captureOrder } from "@/lib/paypal";
 
 export async function POST(_req, { params }) {
   try {
-    const data = await captureOrder(params.orderID);
+    const { orderID } = await params;
+    const data = await captureOrder(orderID);
     const capture = data.purchase_units?.[0]?.payments?.captures?.[0];
     return NextResponse.json({
       status: data.status,
