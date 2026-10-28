@@ -1,23 +1,26 @@
 "use client";
 import { useState } from "react";
-import { FARES, cheapest } from "@/lib/fares";
+import { FARES } from "@/lib/fares";
 import PayPalCheckout from "./components/PayPalCheckout";
+import AgentChat from "./components/AgentChat";
 
 export default function Home() {
   const [selected, setSelected] = useState(null);
-  const best = cheapest("JNB", "LHE");
 
   return (
     <main>
       <h1>Eswatini Travel AI Agent</h1>
-      <p className="sub">Finds the cheapest fare and lets you pay with PayPal (sandbox demo).</p>
-      {best && <p className="best">Agent pick: {best.airline} via {best.via}, ${best.price}</p>}
+      <p className="sub">Ask the agent for a fare. It searches, picks the cheapest, and you pay with PayPal (sandbox demo).</p>
+
+      <AgentChat />
+
+      <h2 className="all">All sample fares</h2>
       <ul className="fares">
         {FARES.map((f) => (
           <li key={f.id} className={selected?.id === f.id ? "on" : ""}>
             <div>
               <strong>{f.airline}</strong> {f.from} → {f.to} via {f.via}
-              <span className="date">{f.depart}</span>
+              <span className="date">{f.depart} · {f.stops} stop{f.stops === 1 ? "" : "s"}</span>
             </div>
             <div className="right">
               <span className="price">${f.price}</span>

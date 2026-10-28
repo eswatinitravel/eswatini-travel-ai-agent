@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "test": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test test/agent.test.mjs"
   },
   "dependencies": {
     "@paypal/react-paypal-js": "^8.9.2",
